@@ -8,18 +8,22 @@ namespace _02_KomodoClaims_Repo
 {
     class KomodoClaimsRepo
     {
-        private List<KomodoClaims> _listOfClaims = new List<KomodoClaims>();
+        private Queue<KomodoClaims> queueOfClaims = new Queue<KomodoClaims>();
+        private int _claimIdCounter = 0;
 
         // Create
-        public void AddMealToList(KomodoClaims claim)
+        public void AddClaimlToQueue(KomodoClaims claim)
         {
-            _listOfClaims.Add(claim);
+            claim.ClaimID = _claimIdCounter + 1;
+            queueOfClaims.Enqueue(claim);
+            _claimIdCounter++;
+            queueOfClaims.Enqueue(claim);
         }
 
         // Read
-        public List<KomodoClaims> GetClaimsList()
+        public Queue<KomodoClaims> GetClaimsQueue()
         {
-            return _listOfClaims;
+            return queueOfClaims;
         }
 
         // Update
@@ -29,7 +33,6 @@ namespace _02_KomodoClaims_Repo
 
             if(oldClaim != null)
             {
-                oldClaim.ClaimID = newClaim.ClaimID;
                 oldClaim.TypeOfClaim = newClaim.TypeOfClaim;
                 oldClaim.Description = newClaim.Description;
                 oldClaim.ClaimAmount = newClaim.ClaimAmount;
@@ -45,7 +48,7 @@ namespace _02_KomodoClaims_Repo
         }
         
         // Delete
-        public bool RemoveClaimFromList(int claimID)
+        public bool RemoveClaimFromQueue(int claimID)
         {
             KomodoClaims claim = GetClaimByID(claimID);
 
@@ -54,10 +57,10 @@ namespace _02_KomodoClaims_Repo
                 return false;
             }
 
-            int initialCount = _listOfClaims.Count;
-            _listOfClaims.Remove(claim);
+            int initialCount = queueOfClaims.Count;
+            queueOfClaims.Dequeue();
 
-            if(initialCount > _listOfClaims.Count)
+            if(initialCount > queueOfClaims.Count)
             {
                 return false;
             }
@@ -70,7 +73,7 @@ namespace _02_KomodoClaims_Repo
 
         public KomodoClaims GetClaimByID(int claimID)
         {
-            foreach(KomodoClaims claim in _listOfClaims)
+            foreach(KomodoClaims claim in queueOfClaims)
             {
                 if(claim.ClaimID == claimID)
                 {

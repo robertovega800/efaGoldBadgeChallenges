@@ -18,14 +18,14 @@ namespace _02_KomodoClaims_Repo
         public int ClaimID { get; set; }
         public ClaimType TypeOfClaim { get; set; }
         public string Description { get; set; }
-        public int ClaimAmount { get; set; }
+        public string ClaimAmount { get; set; }
         public DateTime DateOfIncident { get; set; }
         public DateTime DateOfClaim { get; set; }
         public bool IsValid { get; set; }
 
         public KomodoClaims() { }
 
-        public KomodoClaims(int claimID, ClaimType typeClaim, string description, int claimAmount, DateTime dateOfIncident, DateTime dateOfClaim, bool isValid )
+        public KomodoClaims(int claimID, ClaimType typeClaim, string description, string claimAmount, DateTime dateOfIncident, DateTime dateOfClaim, bool isValid )
         {
             ClaimID = claimID;
             TypeOfClaim = typeClaim;

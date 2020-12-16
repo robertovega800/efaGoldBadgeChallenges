@@ -51,8 +51,19 @@ namespace _02_KomodoClaims_Console
         }
 
         // See all claims
+        private void DisplayAllClaims()
+        {
+            foreach (var element in queueOfClaims)
+            {
+                Console.WriteLine(element);
+            }
+        }
 
         // Take care of next claim
+        private void ViewNextClaim()
+        {
+
+        }
 
         // Enter a new claim
         private void CreateNewClaim()
@@ -69,6 +80,21 @@ namespace _02_KomodoClaims_Console
 
             Console.WriteLine("Enter the claim description:");
             newClaim.Description = Console.ReadLine();
+
+            Console.WriteLine("Enter the claim amount ($1,000, $650, $125):");
+            newClaim.ClaimAmount = Console.ReadLine();
+
+            Console.WriteLine("Enter the date of the incident ('January 1, 2009', 'July 1, 1994', 'September 5, 2004')");
+            string incidentDate = Console.ReadLine();
+            var parsedIncidentDate = DateTime.Parse(incidentDate);
+            newClaim.DateOfIncident = parsedIncidentDate;
+
+            Console.WriteLine("Enter the date of the claim ('January 1, 2009', 'July 1, 1994', 'September 5, 2004'):");
+            string claimDate = Console.ReadLine();
+            var parsedClaimDate = DateTime.Parse(claimDate);
+            newClaim.DateOfClaim = parsedClaimDate;
+
+            
         }
     }
 }
