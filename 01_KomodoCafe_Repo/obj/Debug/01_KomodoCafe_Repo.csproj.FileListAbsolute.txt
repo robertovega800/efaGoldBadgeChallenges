@@ -1,0 +1,12 @@
+C:\Users\rober\source\repos\01_KomodoCafe_Repo\01_KomodoCafe_Repo\bin\Debug\01_KomodoCafe_Repo.dll
+C:\Users\rober\source\repos\01_KomodoCafe_Repo\01_KomodoCafe_Repo\bin\Debug\01_KomodoCafe_Repo.pdb
+C:\Users\rober\source\repos\01_KomodoCafe_Repo\01_KomodoCafe_Repo\obj\Debug\01_KomodoCafe_Repo.csprojAssemblyReference.cache
+C:\Users\rober\source\repos\01_KomodoCafe_Repo\01_KomodoCafe_Repo\obj\Debug\01_KomodoCafe_Repo.csproj.CoreCompileInputs.cache
+C:\Users\rober\source\repos\01_KomodoCafe_Repo\01_KomodoCafe_Repo\obj\Debug\01_KomodoCafe_Repo.dll
+C:\Users\rober\source\repos\01_KomodoCafe_Repo\01_KomodoCafe_Repo\obj\Debug\01_KomodoCafe_Repo.pdb
+C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\01_KomodoCafe_Repo\bin\Debug\01_KomodoCafe_Repo.dll
+C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\01_KomodoCafe_Repo\bin\Debug\01_KomodoCafe_Repo.pdb
+C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\01_KomodoCafe_Repo\obj\Debug\01_KomodoCafe_Repo.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\01_KomodoCafe_Repo\obj\Debug\01_KomodoCafe_Repo.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\01_KomodoCafe_Repo\obj\Debug\01_KomodoCafe_Repo.dll
+C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\01_KomodoCafe_Repo\obj\Debug\01_KomodoCafe_Repo.pdb
