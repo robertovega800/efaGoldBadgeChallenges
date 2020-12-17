@@ -12,7 +12,7 @@ namespace _02_KomodoClaims_Repo
         private int _claimIdCounter = 0;
 
         // Create
-        public void AddClaimlToQueue(KomodoClaims claim)
+        public void AddClaimToQueue(KomodoClaims claim)
         {
            
             _claimIdCounter++;
@@ -92,7 +92,8 @@ namespace _02_KomodoClaims_Repo
         {
             if (queueOfClaims.Count > 0)
             {
-                return queueOfClaims.Peek();
+                KomodoClaims nextClaim = queueOfClaims.Peek();
+                return nextClaim;
             }
             return null;
         }

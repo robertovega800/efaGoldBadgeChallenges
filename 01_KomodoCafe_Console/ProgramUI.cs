@@ -25,7 +25,7 @@ namespace _01_KomodoCafe_Console
 
                 //Display options to the user
                 Console.WriteLine("Select a menu option:\n" +
-                    "1. Create a new meal for the menu\n" +
+                    "\n1. Create a new meal for the menu\n" +
                     "2. View all meals on the menu\n" +
                     "3. View existing meal by 'Meal Number'\n" +
                     "4. Update an existing meal\n" +

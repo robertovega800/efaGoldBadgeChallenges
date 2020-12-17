@@ -9,10 +9,10 @@ namespace KomodoBadge_Repo
     public class KomodoBadge
     {
         public int BadgeID { get; set; }
-        public string DoorsAvailable { get; set; }
+        public List<string> DoorsAvailable { get; set; } = new List<string>();
 
         public KomodoBadge() { }
-        public KomodoBadge(int badgeID, string doorsAvailable)
+        public KomodoBadge(int badgeID, List<string> doorsAvailable)
         {
             BadgeID = badgeID;
             DoorsAvailable = doorsAvailable;

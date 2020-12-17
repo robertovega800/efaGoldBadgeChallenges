@@ -24,7 +24,7 @@ namespace _02_KomodoClaims_Console
             while (keepRunning)
             {
                 Console.WriteLine("Select a menu option:\n" +
-                "1. See all claims\n" +
+                "\n1. See all claims\n" +
                 "2. Take care of next claim\n" +
                 "3. Enter a new Claim\n" +
                 "4. Exit");
@@ -39,6 +39,7 @@ namespace _02_KomodoClaims_Console
                         break;
                     case "2":
                         // Take care of next claim
+                        ViewNextClaim();
                         break;
                     case "3":
                         CreateNewClaim();
@@ -82,7 +83,34 @@ namespace _02_KomodoClaims_Console
         private void ViewNextClaim()
         {
             //clear console
-            //create variabe of type KomodoClaims 
+            Console.Clear();
+
+            //Komodo Claims claim = 
+
+            //create variabe of type KomodoClaims
+
+            KomodoClaims claim = _claimsRepo.GetNextClaimInQueue();
+            Console.WriteLine($"Next claim in line is:\n");
+            DisplayClaimInfo(claim);
+
+            Console.WriteLine("*****************************************");
+
+            Console.WriteLine("\nDo you wish to deal with this claim now?\n" +
+                "1. Yes\n" +
+                "2. No");
+            string input = Console.ReadLine();
+            switch (input)
+            {
+                case "1":
+                    _claimsRepo.RemoveClaimFromQueue();
+                    break;
+                case "2":
+                    Console.Clear();
+                    Menu();
+                    break;
+            }
+                
+
             //set it = to _claimsRepo.(methodToPeek)
 
             //call displayClaimInfo(variable of type komodoClaims)
@@ -126,23 +154,23 @@ namespace _02_KomodoClaims_Console
                 Console.WriteLine("InValid Calim");
             }
 
-            _claimsRepo.AddClaimlToQueue(newClaim);
+            _claimsRepo.AddClaimToQueue(newClaim);
 
 
         }
 
-        private DateTime GetDateTime(string OpeningMessage)
+        private DateTime GetDateTime(string Message)
         {
-            Console.WriteLine($"****************** {OpeningMessage} *************************");
+            Console.WriteLine($"****************** {Message} *************************");
             //ask question
            
-            Console.WriteLine("Please input the year");
+            Console.WriteLine("Please input the year(1994, 2003, 1998)");
             int inputYear = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Please input the month");
+            Console.WriteLine("Please input the month(6, 11, 12)");
             int inputMonth = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Please input the day");
+            Console.WriteLine("Please input the day(01, 13, 27)");
             int inputDay = int.Parse(Console.ReadLine());
 
             DateTime date = new DateTime(inputYear, inputMonth, inputDay);
@@ -153,13 +181,13 @@ namespace _02_KomodoClaims_Console
 
         private void SeedClaimsQueue()
         {
-            KomodoClaims claim1 = new KomodoClaims(ClaimType.Car, "Car accident on 465.", "$400.00",new DateTime(2020,12,12),new DateTime(2020,12,14), true);
-            KomodoClaims claim2 = new KomodoClaims(ClaimType.Home, "Home Invasion.", "$400.00",new DateTime(2020,12,12),new DateTime(2021,12,14), false);
-            KomodoClaims claim3 = new KomodoClaims(ClaimType.Theft, "...IDK?", "$400.00",new DateTime(2020,12,12),new DateTime(2020,12,18), true);
+            KomodoClaims claim1 = new KomodoClaims(ClaimType.Car, "Car accident on 465.", "$400.00",new DateTime(2018,4,25),new DateTime(2018,4,27), true);
+            KomodoClaims claim2 = new KomodoClaims(ClaimType.Home, "House fire in kitchen.", "$4000.00",new DateTime(2018,4,11),new DateTime(2018,4,12), true);
+            KomodoClaims claim3 = new KomodoClaims(ClaimType.Theft, "Stolen pancakes.", "$4.00",new DateTime(2018,4,27),new DateTime(2018,6,01), false);
 
-            _claimsRepo.AddClaimlToQueue(claim1);
-            _claimsRepo.AddClaimlToQueue(claim2);
-            _claimsRepo.AddClaimlToQueue(claim3);
+            _claimsRepo.AddClaimToQueue(claim1);
+            _claimsRepo.AddClaimToQueue(claim2);
+            _claimsRepo.AddClaimToQueue(claim3);
 
         }
     }
