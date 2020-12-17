@@ -1,0 +1,14 @@
+C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\KomodoBadge_UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\KomodoBadge_UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\KomodoBadge_UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\KomodoBadge_UnitTests\bin\Debug\KomodoBadge_UnitTests.dll
+C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\KomodoBadge_UnitTests\bin\Debug\KomodoBadge_UnitTests.pdb
+C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\KomodoBadge_UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\KomodoBadge_UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\KomodoBadge_UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\KomodoBadge_UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\KomodoBadge_UnitTests\obj\Debug\KomodoBadge_UnitTests.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\KomodoBadge_UnitTests\obj\Debug\KomodoBadge_UnitTests.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\KomodoBadge_UnitTests\obj\Debug\KomodoBadge_UnitTests.csproj.CopyComplete
+C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\KomodoBadge_UnitTests\obj\Debug\KomodoBadge_UnitTests.dll
+C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\KomodoBadge_UnitTests\obj\Debug\KomodoBadge_UnitTests.pdb

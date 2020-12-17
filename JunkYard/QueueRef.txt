@@ -1,0 +1,42 @@
+﻿//This is for the Queue setup
+            Employee employee1 = new Employee(1, "Bob");
+            Employee employee2 = new Employee(1, "Greg");
+            Employee employee3 = new Employee(1, "Megan");
+            Employee employee4 = new Employee(1, "Phil");
+            Employee employee5 = new Employee(1, "Bobby");
+
+            Queue<Employee> employees = new Queue<Employee>();
+
+            //add employees to the que..  think of someone being added to a line
+            employees.Enqueue(employee1);
+            employees.Enqueue(employee2);
+            employees.Enqueue(employee3);
+            employees.Enqueue(employee4);
+            employees.Enqueue(employee5);
+
+            Console.WriteLine("*********We got all of the employees*************");
+            //Queue is F.I.F.O
+            foreach (var employee in employees)
+            {
+                Console.WriteLine(employee.Name);
+            }
+
+
+            Console.WriteLine("*********we will take someone out of line*************\n");
+            employees.Dequeue();
+            foreach (var employee in employees)
+            {
+                Console.WriteLine(employee.Name);
+            }
+
+            Console.WriteLine("*********we will take someone else(s) out of line*************\n");
+            employees.Dequeue();
+            employees.Dequeue();
+
+            foreach (var employee in employees)
+            {
+                Console.WriteLine(employee.Name);
+            }
+
+            Console.WriteLine("*********we will see whose next in line************\n");
+            Console.WriteLine(employees.Peek().Name);

@@ -44,10 +44,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <Compile Include="ProgramUI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\02_KomodoClaims_Repo\02_KomodoClaims_Repo.csproj">
+      <Project>{aa0ee3c4-89a7-41fc-9e40-f7996ac777bb}</Project>
+      <Name>02_KomodoClaims_Repo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,8 +9,12 @@ namespace _02_KomodoClaims_Console
 {
     class ProgramUI
     {
+        //need to make a private readonly reference to the KomodoClaimsRepo
+        private readonly KomodoClaimsRepo _claimsRepo = new KomodoClaimsRepo();
+
         public void Run()
         {
+            SeedClaimsQueue();
             Menu();
         }
 
@@ -31,12 +35,13 @@ namespace _02_KomodoClaims_Console
                 {
                     case "1":
                         // See all claims
+                        DisplayAllClaims();
                         break;
                     case "2":
                         // Take care of next claim
                         break;
                     case "3":
-                        // Enter a new claim
+                        CreateNewClaim();
                         break;
                     case "4":
                         //Exit
@@ -53,16 +58,34 @@ namespace _02_KomodoClaims_Console
         // See all claims
         private void DisplayAllClaims()
         {
-            foreach (var element in queueOfClaims)
+            Console.Clear();
+            foreach (var element in _claimsRepo.GetClaimsQueue())
             {
-                Console.WriteLine(element);
+                DisplayClaimInfo(element);
             }
+        }
+
+        //helper method
+        private void DisplayClaimInfo(KomodoClaims claim)
+        {
+            Console.WriteLine($"ClaimId: {claim.ClaimID}\n" +
+                $"TypeOfClaim: {claim.TypeOfClaim}\n" +
+                $"ClaimDescription: {claim.Description}\n" +
+                $"Claim Amount: {claim.ClaimAmount}\n" +
+                $"DateOfInident:{claim.DateOfIncident}\n" +
+                $"DateOfCliam:{claim.DateOfClaim}\n" +
+                $"IsValid: {claim.IsValid}\n");
+            Console.WriteLine("************************************");
         }
 
         // Take care of next claim
         private void ViewNextClaim()
         {
+            //clear console
+            //create variabe of type KomodoClaims 
+            //set it = to _claimsRepo.(methodToPeek)
 
+            //call displayClaimInfo(variable of type komodoClaims)
         }
 
         // Enter a new claim
@@ -84,17 +107,60 @@ namespace _02_KomodoClaims_Console
             Console.WriteLine("Enter the claim amount ($1,000, $650, $125):");
             newClaim.ClaimAmount = Console.ReadLine();
 
-            Console.WriteLine("Enter the date of the incident ('January 1, 2009', 'July 1, 1994', 'September 5, 2004')");
-            string incidentDate = Console.ReadLine();
-            var parsedIncidentDate = DateTime.Parse(incidentDate);
-            newClaim.DateOfIncident = parsedIncidentDate;
 
-            Console.WriteLine("Enter the date of the claim ('January 1, 2009', 'July 1, 1994', 'September 5, 2004'):");
-            string claimDate = Console.ReadLine();
-            var parsedClaimDate = DateTime.Parse(claimDate);
-            newClaim.DateOfClaim = parsedClaimDate;
+            var IncidentDate = GetDateTime("Incident Data");
+            newClaim.DateOfIncident = IncidentDate;
 
-            
+
+            var claimDate = GetDateTime("Claim Data");
+            newClaim.DateOfClaim = claimDate;
+
+            newClaim.IsValid = _claimsRepo.CalculateIsValid(newClaim.DateOfIncident, newClaim.DateOfClaim);
+
+            if (newClaim.IsValid)
+            {
+                Console.WriteLine("Valid Cliam");
+            }
+            else
+            {
+                Console.WriteLine("InValid Calim");
+            }
+
+            _claimsRepo.AddClaimlToQueue(newClaim);
+
+
+        }
+
+        private DateTime GetDateTime(string OpeningMessage)
+        {
+            Console.WriteLine($"****************** {OpeningMessage} *************************");
+            //ask question
+           
+            Console.WriteLine("Please input the year");
+            int inputYear = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Please input the month");
+            int inputMonth = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Please input the day");
+            int inputDay = int.Parse(Console.ReadLine());
+
+            DateTime date = new DateTime(inputYear, inputMonth, inputDay);
+
+            return date;
+
+        }
+
+        private void SeedClaimsQueue()
+        {
+            KomodoClaims claim1 = new KomodoClaims(ClaimType.Car, "Car accident on 465.", "$400.00",new DateTime(2020,12,12),new DateTime(2020,12,14), true);
+            KomodoClaims claim2 = new KomodoClaims(ClaimType.Home, "Home Invasion.", "$400.00",new DateTime(2020,12,12),new DateTime(2021,12,14), false);
+            KomodoClaims claim3 = new KomodoClaims(ClaimType.Theft, "...IDK?", "$400.00",new DateTime(2020,12,12),new DateTime(2020,12,18), true);
+
+            _claimsRepo.AddClaimlToQueue(claim1);
+            _claimsRepo.AddClaimlToQueue(claim2);
+            _claimsRepo.AddClaimlToQueue(claim3);
+
         }
     }
 }

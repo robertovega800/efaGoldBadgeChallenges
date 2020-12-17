@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _02_KomodoClaims_Repo
 {
-    class KomodoClaimsRepo
+   public class KomodoClaimsRepo
     {
         private Queue<KomodoClaims> queueOfClaims = new Queue<KomodoClaims>();
         private int _claimIdCounter = 0;
@@ -14,9 +14,9 @@ namespace _02_KomodoClaims_Repo
         // Create
         public void AddClaimlToQueue(KomodoClaims claim)
         {
-            claim.ClaimID = _claimIdCounter + 1;
-            queueOfClaims.Enqueue(claim);
+           
             _claimIdCounter++;
+            claim.ClaimID = _claimIdCounter;
             queueOfClaims.Enqueue(claim);
         }
 
@@ -48,26 +48,15 @@ namespace _02_KomodoClaims_Repo
         }
         
         // Delete
-        public bool RemoveClaimFromQueue(int claimID)
+        public bool RemoveClaimFromQueue()
         {
-            KomodoClaims claim = GetClaimByID(claimID);
-
-            if(claim == null)
+            if (queueOfClaims.Count>0)
             {
-                return false;
-            }
-
-            int initialCount = queueOfClaims.Count;
-            queueOfClaims.Dequeue();
-
-            if(initialCount > queueOfClaims.Count)
-            {
-                return false;
-            }
-            else
-            {
+                queueOfClaims.Dequeue();
                 return true;
+
             }
+            return false;
         }
 
 
@@ -81,6 +70,30 @@ namespace _02_KomodoClaims_Repo
                 }
             }
 
+            return null;
+        }
+
+        public bool CalculateIsValid(DateTime dateOfInc, DateTime dateOfClaim)
+        {
+            var ans = dateOfInc - dateOfClaim;
+            var comparison = TimeSpan.FromDays(ans.Days);
+            Console.WriteLine(ans);
+            if (comparison.Days<=30 && comparison.Days>0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public KomodoClaims GetNextClaimInQueue()
+        {
+            if (queueOfClaims.Count > 0)
+            {
+                return queueOfClaims.Peek();
+            }
             return null;
         }
     }

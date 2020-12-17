@@ -25,9 +25,8 @@ namespace _02_KomodoClaims_Repo
 
         public KomodoClaims() { }
 
-        public KomodoClaims(int claimID, ClaimType typeClaim, string description, string claimAmount, DateTime dateOfIncident, DateTime dateOfClaim, bool isValid )
+        public KomodoClaims(ClaimType typeClaim, string description, string claimAmount, DateTime dateOfIncident, DateTime dateOfClaim, bool isValid )
         {
-            ClaimID = claimID;
             TypeOfClaim = typeClaim;
             Description = description;
             ClaimAmount = claimAmount;
