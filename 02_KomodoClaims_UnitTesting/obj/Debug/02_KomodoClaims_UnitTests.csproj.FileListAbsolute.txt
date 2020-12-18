@@ -12,3 +12,5 @@ C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\02_KomodoClaims_UnitTest
 C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\02_KomodoClaims_UnitTesting\obj\Debug\02_KomodoClaims_UnitTests.csproj.CopyComplete
 C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\02_KomodoClaims_UnitTesting\obj\Debug\02_KomodoClaims_UnitTesting.dll
 C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\02_KomodoClaims_UnitTesting\obj\Debug\02_KomodoClaims_UnitTesting.pdb
+C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\02_KomodoClaims_UnitTesting\bin\Debug\02_KomodoClaims_Repo.dll
+C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\02_KomodoClaims_UnitTesting\bin\Debug\02_KomodoClaims_Repo.pdb

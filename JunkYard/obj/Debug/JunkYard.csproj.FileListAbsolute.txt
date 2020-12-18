@@ -1,7 +1,6 @@
 C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\JunkYard\bin\Debug\JunkYard.exe.config
 C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\JunkYard\bin\Debug\JunkYard.exe
 C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\JunkYard\bin\Debug\JunkYard.pdb
-C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\JunkYard\obj\Debug\JunkYard.csprojAssemblyReference.cache
 C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\JunkYard\obj\Debug\JunkYard.csproj.CoreCompileInputs.cache
 C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\JunkYard\obj\Debug\JunkYard.exe
 C:\ElevenFiftyProjects\EFAGoldBadgeFinalChallenges-main\JunkYard\obj\Debug\JunkYard.pdb

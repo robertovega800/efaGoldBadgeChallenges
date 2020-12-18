@@ -50,5 +50,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KomodoBadge_Repo\03_KomodoBadge_Repo.csproj">
+      <Project>{1c4e9898-8e95-4a1e-b8f6-aec18cd23d47}</Project>
+      <Name>03_KomodoBadge_Repo</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

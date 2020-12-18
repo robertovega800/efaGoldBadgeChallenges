@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KomodoBadge_Repo
 {
-    class KomodoBadgeRepo
+    public class KomodoBadgeRepo
     {
     private Dictionary<int, KomodoBadge> _dictionaryBadges = new Dictionary<int, KomodoBadge>();
         private int Count;
@@ -41,6 +41,10 @@ namespace KomodoBadge_Repo
         }
 
         // Delete
+        /*public bool RemoveBadge(KomodoBadge)
+        {
+
+        }*/
 
 
         public KomodoBadge GetBadgeByDictKey(int dictKey)

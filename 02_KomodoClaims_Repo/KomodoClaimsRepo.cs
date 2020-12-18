@@ -48,7 +48,7 @@ namespace _02_KomodoClaims_Repo
         }
         
         // Delete
-        public bool RemoveClaimFromQueue()
+        public bool RemoveClaimFromQueue(KomodoClaims _claim)
         {
             if (queueOfClaims.Count>0)
             {
